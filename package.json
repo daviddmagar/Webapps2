@@ -13,10 +13,11 @@
     "express": "^4.16.4",
     "firebase": "^5.7.0",
     "mustache": "^3.0.1",
-    "node.js": "8.x"
+    "node.js": "8.10.0",
+    "nodejs": "0.0.0"
   },
   "engines": {
-    "node": "8.x"
+    "node": "8.10.0"
   },
   "directories": {
     "test": "test"
