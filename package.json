@@ -10,6 +10,7 @@
   "author": "David Magar",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "firebase": "^5.7.0",
     "mustache": "^3.0.1",
