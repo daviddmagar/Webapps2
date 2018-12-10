@@ -48,27 +48,26 @@ exports.load = function () {
 };
 
 exports.loadCheckout = function () {
-    //filterProducts(products);
-    console.log(totalPrice)
-    book = { price:  totalPrice };
-    console.log(book)
-    console.log(totalPrice)
+
+    
     length = purchases.length - 1;
+    //if the last element is defined
     if (purchases[length] != undefined ){
-    if (purchases[length].price == totalPrice && purchases.length != 1) {
-        purchases.pop();
-    }}
+        //if the last element is already the total price then remove it before adding again 
+        if (purchases[length].price == totalPrice && purchases.length != 1) {
+            purchases.pop();
+        }
+    }
+    book = { price:  totalPrice };
+    if (totalPrice == 0){
+        book = { 
+            name: 'No Items In Cart',
+            price:  0 };        
+    }
     purchases.push(book);
     purchases2 = purchases;
     purchases = [];
     totalPrice = 0;
-    console.log(purchases2.length)
-    if (purchases2.length == 0) {
-        book = { 
-            title: "No Items In Cart",
-            price:  0 };
-        purchases2.push(book);
-        }
     return new Promise(function (resolve, reject) {
         resolve(purchases2);
     });

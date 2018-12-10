@@ -99,6 +99,7 @@ app.get("/cart", function (req, res) {
 app.post("/checkOut", function (req, res) {
     console.log("---------Checkout--------------")
     model.checkOut().then(function (products) {
+        console.log(products)
         var view = fs.readFileSync("./view.mjs", "utf8");
         res.send(Mustache.render(view, {
             products: products
