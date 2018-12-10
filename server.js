@@ -107,6 +107,6 @@ app.post("/checkOut", function (req, res) {
 });
 
 // start the web server attached to the provided port
-app.listen(5000, function () {
-    console.log("listening on localhost: 5000");
+app.listen(port, function () {
+    console.log("listening on localhost: " + port);
 });
