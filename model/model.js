@@ -54,13 +54,21 @@ exports.loadCheckout = function () {
     console.log(book)
     console.log(totalPrice)
     length = purchases.length - 1;
+    if (purchases[length] != undefined ){
     if (purchases[length].price == totalPrice && purchases.length != 1) {
         purchases.pop();
-    }
+    }}
     purchases.push(book);
     purchases2 = purchases;
     purchases = [];
     totalPrice = 0;
+    console.log(purchases2.length)
+    if (purchases2.length == 0) {
+        book = { 
+            title: "No Items In Cart",
+            price:  0 };
+        purchases2.push(book);
+        }
     return new Promise(function (resolve, reject) {
         resolve(purchases2);
     });
