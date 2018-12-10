@@ -1,0 +1,241 @@
+<!-- Required doctype -->
+<!doctype html>
+<!-- Required html element, optional set lang="en" -->
+<html lang="en">
+<!-- Required head element -->
+
+<head>
+    <!-- Required meta tags, both charset and viewport -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS, comes from the Bootstrap starter tempalte -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- JQuery first, then Popper.js, then Bootstrap JS, comes from the Bootstrap starter template -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- App JS entry point provided via Express -->
+    <!--<script src="/app/app.js"></script> -->
+
+
+
+
+
+    <!-- Title of the project -->
+    <title>Zmazon Online Marketplace</title>
+
+
+    <!--Shamelessly ripped from the bootstrap site cause I couldn't get expand to work with my project 1 nav bar for some reason.-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button2 class="navbar-toggler" id="expand" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button2>
+        <a class="navbar-brand" href="#">Zmazon</a>
+
+        <div class="navbar bg-light navbar-light navbar-expand-lg">
+            <!-- The "navbar-nav" provides CSS properties for the nav elements -->
+            <!-- TODO: Create an a element for the Departments tab. Must have class="nav-link". Set href="#" -->
+            <a class="nav-link" href="#">Departments</a>
+            <!-- Alternatively, we could just use one a element with class="navbar-nav nav-link" -->
+            <!-- Close the div element -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button2 class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button2>
+            </form>
+        </div>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item "> 
+                    <a class="nav-link" href="#">Localization</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart" id="Cart">Cart</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+
+</head>
+
+<!-- Required body element -->
+
+<body>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <h6>
+                                <span data-feather="Availibility"></span>
+                                Availability
+                            </h6>
+                            <ul>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available" id="availableBox"
+                                            value="option2">
+                                        <label class="form-check-label" for="availableBox">
+                                            Available
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Available" id="unavailableBox"
+                                            value="option2">
+                                        <label class="form-check-label" for="unavailableBox">
+                                            Unavailable
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <h6>
+                                <span data-feather="Price"></span>
+                                Price
+                            </h6>
+                            <ul>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Price" id="fiftyDollars"
+                                            value="option1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            $50-$100
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Price" id="twentyfiveDollars"
+                                            value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            $25-$50
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Price" id="zeroDollars"
+                                            value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            $0-$25
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <h6>
+                                <span data-feather="Rating"></span>
+                                Rating
+                            </h6>
+                            <ul>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Rating" id="two" value="option1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            +2
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="Rating" id="one" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            +1
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col">
+                <div class="container-fluid left-justify">
+                    <div class="row" id="view"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="page-footer font-small blue pt-4">
+
+    <div class="container-fluid text-center">
+
+        <!-- Grid row -->
+        <div class="row">
+            <div class="col center-block">
+                <h4 class="text-uppercase">Resources</h4>
+            </div>
+        </div>
+
+        <div class="row">
+
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <a class="text-uppercase" href="#">About Us</a>
+            </div>
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <a class="text-uppercase" href="#">Contact Us</a>
+            </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-database.js"></script>
+<!-- Custom JS comes last, should only be single entry point -->
+<script src="/app.js"></script>
+<!-- Mustache provided via Express -->
+<script src="/mustache.js"></script>
+
+
+<!-- <link rel="stylesheet" media="screen and (min-width: 1080px)" href="/largescreen.css">
+<link rel="stylesheet" media="screen and (max-width: 1024px)" href="/mediumscreen.css">
+<link rel="stylesheet" media="screen and (max-width: 812px)" href="/smallscreen.css"> -->
+
+
+
+
+<script id="template" type="x-tmpl-mustache">
+                {{#products}}    
+                <div class="col" id={{id}}>
+                <h3>{{name}}</h3>
+                <p>Price: ${{price}}<br>Rating: {{rating}}<br>Stock: {{stock}}<br> <button type="button2" class="btn btn-success" id={{id}}>Purchase</button></br></p>
+                </div>
+                {{/products}}
+</script>
+<!-- Close html element -->
+
+</html>
+<!-- End Document -->

@@ -1,0 +1,22 @@
+{
+  "name": "zmazon2",
+  "version": "1.0.0",
+  "description": "A completed assignment for Web Apps. Finally.",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "David Magar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase": "^5.7.0",
+    "mustache": "^3.0.1",
+    "node.js": "8.10.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
+}
