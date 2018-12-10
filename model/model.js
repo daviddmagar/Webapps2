@@ -142,7 +142,7 @@ function checkAvailable(products) {
             if (filterVals[3] == "true") {
                 //$("#" + id).show();
                 console.log("Do nothing");
-            } else if (product["stock"] == 0) {
+            } else if (product["stock"] <= 0) {
                 removeItem(product);
             }
         } else if (filterVals[3] == "true") {
