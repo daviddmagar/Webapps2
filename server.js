@@ -15,7 +15,7 @@ var app = express();
 // get the port from command line
 // 0 arg is always node, 1 arg is always filename
 // 2 arg is the first command line arg
-var port = parseInt(process.argv[2]);
+var port = process.env.PORT;
 
 // configure app to use bodyParser with a basic URL decoder
 app.use(bodyParser.urlencoded({
